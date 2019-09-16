@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Элементы управления</title>
+		<script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+		<script type="text/javascript">
+			$(function() {				
+				//Функция, выполняемая сразу после загрузки страницы
+				$("#btn_Go").click(function() {
+					//alert("Button pressed");
+					
+					//Получение значения, введённого в поле
+					//alert($("#user_name").val());
+					if($("#user_name").val()<0) {
+						alert("Отрицательные значения недопустимы");
+					}
+					
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<!--Однострочное поле для ввода текста-->
+		<input id="user_name" name="" type="text" size="10" value="Текст по умолчанию"/> 
+		<!--Пароль-->
+		<input id="" name="" type="password" size="10" value="Текст по умолчанию"/> 
+		
+		<!--Многострочное текстовое поле-->
+		<textarea cols="20" rows="20">
+			Значение по умолчанию
+		</textarea>
+		<br/>
+		<!--Раскрывающийся список-->
+		<select>
+			<option>Вариант 1</option>
+			<option>Вариант 2</option>
+			<option>Вариант 3</option>
+			<option>Вариант 4</option>
+		</select><br/>
+		
+		<!--Список для выбора нескольких вариантов-->
+		<select multiple="multiple">
+			<option>Вариант 1</option>
+			<option>Вариант 2</option>
+			<option>Вариант 3</option>
+			<option>Вариант 4</option>
+		</select><br/>
+		
+		<!--Скрытое поле-->
+		<input type="hidden" value=""/>
+		
+		<br/>
+		<input id="" type="checkbox"/>Вариант 1<br/>
+		<input id="" type="checkbox"/>Вариант 2<br/>
+		<input id="" type="checkbox"/>Вариант 3<br/>
+		
+		<br/>
+		<input name="radio_test" id="" type="radio"/>Вариант 1<br/>
+		<input name="radio_test" id="" type="radio"/>Вариант 2<br/>
+		<input name="radio_test" id="" type="radio"/>Вариант 3<br/>
+		
+		
+		
+		<!--Кнопка отправки формы-->
+		<input id="btn_Go" name="" type="Submit" value="Надпись на кнопке"/>
+	</body>	
+</html>
